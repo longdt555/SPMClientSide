@@ -1,0 +1,30 @@
+
+1. Run Visual Studio Code
+2. Press "Ctrl + ~" and CD go to your work folder (ex: E:\Working\webreact).
+3. New project "create-react-app website03", "cd website03" and "code ."
+4. Install lib
+     npm install jquery --save
+     npm install redux --save 
+     npm install react-redux --save
+     npm install redux-thunk --save
+     npm install react-router-dom --save
+     npm install node-sass-chokidar --save
+     npm install npm-run-all --save
+     npm install react-custom-scrollbars --save
+     npm install antd --save
+5. Run Eject
+     npm run eject
+6. Edit file package.json
+     "scripts": {
+          "build-css": "node-sass-chokidar src/ -o src/",
+          "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+          "start-js": "node scripts/start.js",
+          "start": "npm-run-all -p watch-css start-js",
+          "build-js": "node scripts/build.js",
+          "build": "npm-run-all build-css build-js",
+          "test": "node scripts/test.js --env=jsdom"
+          },
+7. Build site:
+     npm run build
+8. Public site:
+     Copy folder build and setup site in iis or tomcat.
